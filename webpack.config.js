@@ -12,11 +12,16 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions:['.ts','.js','tsx'],
+    extensions:['.ts','.js','.tsx'],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index.js',
     publicPath: 'dist/',
+  },
+  devServer: {
+    publicPath: '/dist/',
+    hot: true,
+    open: true,
   }
 }
